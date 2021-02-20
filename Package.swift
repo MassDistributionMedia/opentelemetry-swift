@@ -10,8 +10,8 @@ let package = Package(
                 .tvOS(.v11),
                 .watchOS(.v3)],
     products: [
-//        .library(name: "OpenTelemetryApi", type: .dynamic, targets: ["OpenTelemetryApi"]),
-//        .library(name: "libOpenTelemetryApi", type: .static, targets: ["OpenTelemetryApi"]),
+        .library(name: "OpenTelemetryApi", type: .dynamic, targets: ["OpenTelemetryApi"]),
+        .library(name: "libOpenTelemetryApi", type: .static, targets: ["OpenTelemetryApi"]),
         .library(name: "OpenTelemetrySdk", type: .dynamic, targets: ["OpenTelemetrySdk"]),
         .library(name: "libOpenTelemetrySdk", type: .static, targets: ["OpenTelemetrySdk"]),
 //        .library(name: "OpenTracingShim", type: .dynamic, targets: ["OpenTracingShim"]),
@@ -42,9 +42,9 @@ let package = Package(
         .package(name: "swift-atomics", url: "https://github.com/apple/swift-atomics.git", from: "0.0.1")
     ],
     targets: [
-//        .target(name: "OpenTelemetryApi",
-//                dependencies: []
-//        ),
+        .target(name: "OpenTelemetryApi",
+                dependencies: []
+        ),
         .target(name: "OpenTelemetrySdk",
                 dependencies: ["OpenTelemetryApi",
                                .product(name: "Atomics", package: "swift-atomics")]
